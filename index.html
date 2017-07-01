@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+  overflow: hidden;
+  background: url('https://scontent.fykz1-1.fna.fbcdn.net/v/t39.10260-6/19311620_1880921388897934_1175789800276361216_n.jpg?oh=18d1b7889a9072fc41bd2d1e508e9c1e&oe=59C4B237');
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding: 0;
+  margin: 0 auto;  
+  min-height: 100%;
+  min-width: 100%;
+  font-family: helvetica neue,arial,helvetica,freesans,liberation sans,numbus sans l,sans-serif;
+  line-height: 1.5;
+}
+h1{
+  background: rgba(255,255,255,0.5);
+  display: block;
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  z-index: 99999999999;
+}
+a{
+  color: #444;
+  font-size: 18px;
+}
+.mapleleaf{
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUAAAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD///+Gx+6+AAAAW3RSTlMAjQFPTgPU1wRiYUYFCOGl3HCbmnF1dEVEExQgHeQRtNDBi1Ysy8KElqwCWaCMoQ36+w/GCsBM6YiZBmb5bjrn60Abys8fp3b9o6K4t/jalEILIcnb7A4ZByQvtW+1yAAAAAFiS0dEXOrYAJcAAAAHdElNRQfhBwEPMy2huKeKAAABPUlEQVQ4y4XTaVeCQBQG4GsiWYpK0eq+K1pQorarbVqhppUt9///j0AQOcAw74c5A/OcM3Pm3gFwJrABtASRoZEQi5thitlCxG2f9UgUuJhmYhxEIwQTT/A7qGdXSMQJZg/X2SeYA5s5JJgjmzn2WE+mtCFtkbT2lUrarkQfeDYDkLVMFiDD8tYq5PKFYqmMFQ6qlqkCV8FyqVjI55amZv6viw3LNMS6OauZFTLTDFjm5HQ1Cy6NJCM5Z+fGoVs+pmUQpe1j2opOOl30S7ejmfCFr7m8Wm52fUM+8u3qpu96BNIfrMtx/+BJHp/sJeWaHuRZcRR+OHKI0dDdHS8O8+rRQW8Oo7qJNJYn6lRgBv13RpiqE3ksucxsbnQTfJidN5+RX9kn0PNFJyGZbhYoUs03/lDNLy6o5s/9RP8B8HmnfdMGaJYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDctMDFUMTU6NTE6NDUrMDA6MDAzMc8RAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA3LTAxVDE1OjUxOjQ1KzAwOjAwQmx3rQAAAABJRU5ErkJggg==')
+}
+</style>
+
+<title>Happy 150th Birthday Canada</title>
+  
+</head>
+
+<body>
+
+<h1><a href="https://www.entonbiba.com/codes/happy-birthday-canada-flag-background">View the code blog post on my website and download the code from github.</a></h1>
+
+<script>
+alert('HAPPY BIRTHDAY CANADA!');
+var windowheight = window.screen.height;
+var windowwidth = window.screen.width;
+for (var i=0; i<720; i++) {
+  var mapleleaf = '<span id="'+i+'" class="mapleleaf"></span>';
+  var rotateleaf = random(0,150);
+  var topmargin = random(0,windowheight);
+  var leftmargin = random(0,windowwidth);
+  var opacity = random(0.01,1);
+  $('body').append(mapleleaf);
+  $('#'+i).css('transform','rotate('+rotateleaf+'deg)').css('top',topmargin+'px').css('left',leftmargin+'px').css('opacity',opacity+'');
+
+  setInterval(function(){
+    console.log(i);
+    var opacity = random(0.01,1);
+    var leafnum = Math.round(Math.random() * 1000) - 1;
+    $('.mapleleaf:eq('+leafnum+')').animate({
+      opacity: opacity
+    }, 1000);
+  }, 1500);
+
+}
+
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+</script>
+
+</body>
+</html>
